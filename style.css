@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    background-color: hsl(235, 18%, 26%);
+}
+
+.container,
+.success-message {
+    min-width: 375px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.hero {
+    background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+    min-width: 375px;
+    min-height: 284px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 10px 10px;
+}
+
+.landing_heading {
+    padding: 10px;
+}
+
+.landing_heading h2 {
+    font-size: 2.5rem;
+    color: rgb(36, 39, 66);
+    padding: 15px;
+}
+
+.landing_heading .para_text {
+    padding: 15px;
+    color: rgb(54, 56, 78);
+    font-size: 1rem;
+}
+
+.landing_heading ul {
+    padding: 10px 20px;
+}
+
+.landing_heading ul li {
+    list-style-image: url("./assets/images/icon-success.svg");
+    list-style-position: inside;
+    padding: 10px 0;
+    color: rgb(54, 56, 78);
+}
+
+.form_container {
+    padding: 15px;
+}
+
+.form_container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_container form .label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgb(36, 39, 66);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_container form .invalid {
+    color: rgb(255, 98, 87);
+}
+
+.form_container form input:valid:focus {
+    border: 2px solid green;
+}
+
+.form_container form input,
+.form_container form button,
+.dismiss-button {
+    height: 50px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form_container form input {
+    border: 1px solid rgb(146, 148, 160);
+    outline: transparent;
+    font-weight: 400;
+
+}
+
+.form_container form .submit_btn,
+.dismiss-button {
+    background-color: rgb(36, 39, 66);
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    box-shadow: 1px 1px 3px #36384e;
+    cursor: pointer;
+}
+
+.form_container form input:invalid:focus {
+    border: 2px solid rgb(255, 98, 87);
+    background-color: rgba(255, 98, 87, 0.25);
+}
+
+.form_container form input:valid:focus {
+    border: 2px solid green;
+}
+
+.success-message {
+    display: none;
+    color: green;
+    /* margin-top: 2rem; */
+}
+
+/* .dismiss-button {
+    color: dodgerblue;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: underline;
+} */
+
+.success-message {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    /* margin: 10% auto; */
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15% 20px 0 20px;
+}
+
+.thanks_box,
+.dismiss-button {
+    margin: 20px;
+}
+
+.dismiss-button {
+    margin-bottom: 8%;
+}
+
+.check_icon {
+    width: 50px;
+    height: 50px;
+    margin: 20px 0;
+}
+
+.thanks_box h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: rgb(36, 39, 66);
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
+}
+
+.thanks_box .subscribe_message {
+    font-weight: 400;
+    color: rgb(54, 56, 78);
+}
+
+.thanks_box .subscribe_message #success-email {
+    color: rgb(36, 39, 66);
+    font-weight: 700;
+}
+
+@media (min-width: 720px) {
+
+    .container {
+        display: flex;
+        max-width: 992px;
+        margin: 5% auto;
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    .hero {
+        min-width: auto;
+        flex-basis: 33%;
+        /* Set the hero section to occupy 33% of the container */
+        background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        /* Center the background image */
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .landing_heading {
+        flex-basis: 67%;
+        /* Set the landing_heading section to occupy 67% of the container */
+    }
+
+    .success-message{
+        width: 400px;
+        height: 400px;
+        margin: 10% auto;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .thanks_box .check_icon{
+        margin: 0;
+    }
+}
